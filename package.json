@@ -1,0 +1,28 @@
+{
+  "author": "Your Name",
+  "name": "YOUR-APP-NAME",
+  "description": "",
+  "version": "0.0.0",
+  "homepage": "",
+  "repository": {
+    "type": "git",
+    "url": ""
+  },
+  "scripts": {
+    "start": "brunch watch --server",
+    "postinstall": "bower install"
+  },
+  "dependencies": {
+    "javascript-brunch": "< 1.9.0",
+    "coffee-script-brunch": "< 1.9.0",
+
+    "css-brunch": "< 1.9.0", 
+    "stylus-brunch": "< 1.9.0",
+    "jade-brunch": "< 1.9.0",
+
+    "uglify-js-brunch": "< 1.9.0",
+    "clean-css-brunch": "< 1.9.0",
+
+    "auto-reload-brunch": "< 1.9.0"
+  }
+}

@@ -1,0 +1,9 @@
+{
+  "name": "YOUR-APP-NAME",
+  "version": "0.0.0",
+  "dependencies": {
+    "jquery": "~2.0.3",
+    "neck": "master",
+    "backbone.localStorage": "~1.1.7"
+  }
+}
