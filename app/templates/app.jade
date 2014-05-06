@@ -1,33 +1,32 @@
 section#todoapp
   header#header
     h1 todos 
-    form(ui-event-submit="@addTodo"): input#new-todo(
+    form(): input#new-todo(
       placeholder="What needs to be done?"
-      ui-bind="newTodo"
       autocomplete="off"
       autofocus
     )
   
   section#main
-    input#toggle-all(type="checkbox", ui-bind="toggleAll")
+    input#toggle-all(type="checkbox")
     label(for="toggle-all") Mark all as complete 
-    ul#todo-list(ui-collection="todos", collection-filter="filter[filterName]")
-      li(ui-class="{'editing': edit, 'completed': item.get('done')}")
+    ul#todo-list()
+      li
         div.view
-          input(class="toggle", type="checkbox", ui-bind="item", bind-property="'done'")
-          label(ui-value="item.get('title')", ui-event-dblclick="edit = true")
-          button.destroy(ui-event-click="item.destroy()")
-        form(ui-event-submit="edit = false"): input.edit(ui-bind="item", bind-property="'title'", ui-event-blur="edit = false")
+          input(class="toggle", type="checkbox")
+          label Your todo
+          button.destroy
+        form: input.edit
   
   footer#footer
-    span#todo-count(ui-show="@doneTodos(todos)")
-      strong(ui-value="@doneTodos(todos)")
+    span#todo-count
+      strong
       |  items left
     ul#filters
-      li: a(ui-event-click="filterName = 'all'", ui-class="{'selected': filterName == 'all'}") All
-      li: a(ui-event-click="filterName = 'active'", ui-class="{'selected': filterName == 'active'}") Active
-      li: a(ui-event-click="filterName = 'completed'", ui-class="{'selected': filterName == 'completed'}") Completed
-    button#clear-completed(ui-event-click="@clearCompleted") Clear completed (completed)
+      li: a All
+      li: a Active
+      li: a Completed
+    button#clear-completed Clear completed (completed)
 
 footer#info
   p Double-click to edit a todo
