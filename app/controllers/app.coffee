@@ -1,6 +1,6 @@
 class Model extends Backbone.Model
   defaults:
-    done: 1
+    done: 0
 
   constructor:->
     super
